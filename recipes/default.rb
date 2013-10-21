@@ -22,3 +22,14 @@ node["irssi"]["packages"].each do |name|
     action :install
   end
 end
+
+template node["irssi"]["config_file"] do
+  source "irssi.conf.erb"
+  owner "root"
+  group "root"
+  mode 0644
+
+  variables(
+    node["irssi"]
+  )
+end

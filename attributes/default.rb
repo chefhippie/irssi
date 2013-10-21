@@ -20,3 +20,5 @@
 default["irssi"]["packages"] = %w(
   irssi
 )
+
+default["irssi"]["config_file"] = "/etc/irssi.conf"
